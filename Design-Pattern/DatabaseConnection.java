@@ -4,7 +4,9 @@ public class DatabaseConnection {
 //    applying on Creational-DesignPattern-Singleton
 
     private static DatabaseConnection myConneciton;
+    
     private DatabaseConnection( ){
+        //construor must be private to avoid others to start connections without the (static myConnection)
         System.out.print("connection started now...");
     }
 
