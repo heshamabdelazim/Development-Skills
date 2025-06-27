@@ -5,7 +5,6 @@
 // FIRST==============================
 export function selectionSort_1(arr): taskObj[] {
   // arr is [{id:5},{id:3},{id:2},{id:4},{id:1}]
-  // output is 
   for (let i = 0; i < arr.length; i++) {
     let smallestInd = i;
     for (let j = i + 1; j < arr.length; j++) {
