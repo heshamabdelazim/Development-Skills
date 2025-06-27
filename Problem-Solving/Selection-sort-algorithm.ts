@@ -1,10 +1,11 @@
 //This file has (3) methods acts => Selection Sort => O(N^2)
+//(selection sort algorithm) => find the smallest every time and swap its place
+
 
 // FIRST==============================
 export function selectionSort_1(arr): taskObj[] {
-  // inputs is [{id:5},{id:3},{id:2},{id:4},{id:1}]
-  // output is [{id:1},{id:2},{id:3},{id:4},{id:5}]
-  //
+  // arr is [{id:5},{id:3},{id:2},{id:4},{id:1}]
+  // output is 
   for (let i = 0; i < arr.length; i++) {
     let smallestInd = i;
     for (let j = i + 1; j < arr.length; j++) {
@@ -18,14 +19,12 @@ export function selectionSort_1(arr): taskObj[] {
     arr[smallestInd] = temp;
   }
   console.log(arr);
-  return arr; //O(N^2)
+  return arr; //[{id:1},{id:2},{id:3},{id:4},{id:5}]
 }
 
 // SECOND==============================
 export function selectionSort(arr): taskObj[] {
-  //(selection sort algorithm) => find the smallest every time and swap its place
-  // inputs is [{id:5},{id:3},{id:2},{id:4},{id:1}]
-  // output is [{id:1},{id:2},{id:3},{id:4},{id:5}]
+  // arr is [{id:5},{id:3},{id:2},{id:4},{id:1}]
   const finalArr = [];
   let indexMove: number = 1;
   let smallest = { obj: arr[0], index: 0 };
@@ -45,13 +44,12 @@ export function selectionSort(arr): taskObj[] {
     }
   }
   console.log(finalArr);
-  return finalArr;
+  return finalArr; //[{id:1},{id:2},{id:3},{id:4},{id:5}]
 }
 
 // THIRD==============================
 export function selectionSort_3(arr): taskObj[] {
-  // inputs is [{id:5},{id:3},{id:2},{id:4},{id:1}]
-  // output is [{id:1},{id:2},{id:3},{id:4},{id:5}]
+  // arr is [{id:5},{id:3},{id:2},{id:4},{id:1}]
   const finalArr: taskObj[] = [];
   for (let i = 0; i < arr.length; i++) {
     const { smallestObj, smallestIndex } = find_TheSmallest(arr);
@@ -59,7 +57,7 @@ export function selectionSort_3(arr): taskObj[] {
     arr.splice(smallestIndex, 1); //smallest obj got? Delete it from the arr
     --i; // no increase, because the array is reduced every time (start all loop again)
   }
-  return finalArr; //O(n^2)
+  return finalArr; //[{id:1},{id:2},{id:3},{id:4},{id:5}]
 }
 
 function find_TheSmallest(arr) {
