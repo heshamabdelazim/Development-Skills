@@ -1,7 +1,7 @@
-type myNode = Nodee | null | undefined;
+type myNode = Nodee | null;
 export type product = { name: string; quantity: number; id: number };
 // --------------------------------
-class Nodee {
+class Nodee { //in JS, There's a keyword "Node" then I used "Nodee"
   data: product;
   nextP: myNode;
   preP: myNode;
@@ -160,3 +160,4 @@ y.insert_first("four", 4);
 // y.editProduct(anyId, 9);
 //eleven => nine => seven => five => three => one => two => four => six => eight => ten => twelve
 // four => three => two => one
+
